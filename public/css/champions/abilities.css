@@ -1,0 +1,30 @@
+/*
+#00ACE9 -blue
+#D43F3F -red
+#6A9A1F -green
+#F6F6E8 -white
+#404040 -grey
+*/
+
+#abilities{
+  float: none;
+  margin: auto;
+  background-color: #F6F6E8;
+  padding: 0 5%;
+}
+
+.ability{
+  border-bottom: 1px dashed #404040;
+  padding: 40px 50px;
+}
+.ability:last-child{
+
+  border-bottom: none;
+}
+
+#abilities > input[type=submit]{
+  margin: 10px auto;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  display: block;
+}

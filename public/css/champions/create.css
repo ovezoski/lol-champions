@@ -1,0 +1,45 @@
+/*
+#00ACE9 -blue
+#D43F3F -red
+#6A9A1F -green
+#F6F6E8 -white
+#404040 -grey
+*/
+
+#champion-form{
+  margin: auto;
+  max-width: 80%;
+  background: #6A9A1F;
+}
+#champion-form > input{
+  margin: 10px;
+}
+
+#abilities{
+    margin-top: 30px;
+    padding: 1% 7%;
+}
+
+#abilities > .ability{
+    padding: 30px 30%;
+    position: relative;
+}
+
+#abilities > .ability > *{
+  margin: 5px auto;
+
+}
+#abilities > .ability{
+
+  border-bottom: 2px dashed #F6F6E8;
+}
+#abilities > .ability:last-child{
+
+  border-bottom: none;
+}
+
+.ability > h3{
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
