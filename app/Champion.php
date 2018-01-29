@@ -16,4 +16,16 @@ class Champion extends Model
     {
       return $this->hasMany(Ability::class);
     }
+
+    public function Subscribers()
+    {
+      return $this->belongsToMany(Subscriber::class);
+    }
+
+    public function subscribe(Subscriber $subscriber)
+    {
+      if(!$this->subscribers()->where('email', $subscriber->email)->get()->first()){
+        $this->subscribers()->attach($subscriber->id);
+      }
+    }
 }

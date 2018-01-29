@@ -1,6 +1,4 @@
-#champion *{
-  float: none !important;
-}
+
 #champion{
   margin: 50px auto;
   float: none;
@@ -41,17 +39,48 @@
 }
 #abilities{
   position: absolute;
-  top: 200px;
+  top: 300px;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+  border: 1px solid white;
+  padding: 30px 10px;
+  margin-bottom: 30px;
 }
-.ability > .name{
-  font-size: 3em;
+.ability{
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  padding: 2%;
+  margin: auto;
+}
 
+
+.ability > .name{
+display: inline-block;
+margin-left: 10px;
 }
 .ability > .name > .type{
-  font-size: 0.3em;
+  font-size: 0.6em;
   display: block;
+}
+
+.ability img{
+  display: inline-block;
+}
+.ability iframe{
+  float: right;
+
+}
+
+.ability > .description{
+  margin: 20px 10px;
+  padding: 20px;
+  width: 50%;
+}
 
 
-.ability > .name > .title{
-  line-height: 5px;
+
+.prompt-toggle{
+  background: #eac67c;
 }

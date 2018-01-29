@@ -14,20 +14,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-  <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
 
+
+
+  <div id="app">
+      <div class="container">
         @include('layouts.navigation')
         <div class="content">
           @yield('content')
         </div>
     </div>
+  </div>  
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    @include('layouts.prompt-configure')
+
 </body>
 </html>

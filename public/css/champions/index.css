@@ -1,0 +1,19 @@
+#champions{
+  margin: auto;
+  text-align: center;
+}
+
+.champion{
+  display: inline-block;
+  width: 17.5%;
+  min-width: 200px;
+  padding: 20px 0.5%;
+  margin: 0.5%;
+  background: ;
+  text-align: center;
+}
+
+.champion img{
+  width: 120px;
+  height:120px;
+}

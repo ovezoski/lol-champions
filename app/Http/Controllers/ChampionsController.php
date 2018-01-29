@@ -73,16 +73,13 @@ class ChampionsController extends Controller
       request()->session()->forget('champion');
       request()->session()->pull('abilities');
 
-      event(new App\events\ChampionCreated($champion));
+      event(new \App\events\ChampionCreated($champion));
 
       return redirect('champions');
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function show(Champion $champion)
     {
@@ -91,25 +88,34 @@ class ChampionsController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Champion $champion)
     {
-        //
+      return view('champions.edit', compact('champion'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Champion $champion)
     {
-        //
+      // update champion
+          $champion->video = request('champion-video');
+          $champion->save();
+
+      // update champions`s abilities
+          $abilities = $champion->abilities;
+          foreach ($abilities as $number => $ability) {
+
+            $ability->title = request('title')[$number];
+            $ability->description = request('description')[$number];
+            $abiliti->video = request('video')[$number];
+            $ability->save();
+
+          }
+
+          return redirect('/champions/'.$champion->name);
+
     }
 
     /**
@@ -122,4 +128,5 @@ class ChampionsController extends Controller
     {
         //
     }
+
 }

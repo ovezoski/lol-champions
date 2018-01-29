@@ -1,14 +1,12 @@
 @component('mail::message')
 
-Greeting sumoner,
+Greeting summoner,
 
+A new champion has been added to the league, make sure to check {{$champion->name}}`s abilities and stats <a href="{{ url('champions/').'/'.$champion->name }}"> here. </a>
+ @component('mail::button', ['url' => url('champions').'/'.$champion->name ])
+ kako ne
+ @endcomponent
 
-a new champion has joined the league. {{ $champion->name }} will be present in the game from now on.  
-
-@component('mail::button', ['url' => ''])
-kako ne
-@endcomponent
-
-Thanks,<br>
+ Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

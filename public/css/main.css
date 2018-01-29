@@ -1,20 +1,110 @@
 body{
-  background: #404040;
+background: #12121e;
+color: white;
+}
+
+*{
+
 }
 .content{
-  padding: 1%;
+  margin-top: 10px;
+  margin: 10px 1%;
 }
 /*
-#00ACE9 -blue
-#D43F3F -red
-#6A9A1F -green
-#F6F6E8 -white
-#404040 -grey
+#12121e - ink
+#233237 - dark blue
+#eac67c - yellow
+#984b43 -red
+
 */
-.navbar{
-  background: #404040;
-  border-bottom: 2px solid #6A9A1F;
+a{
+  color: inherit !important;
+  text-decoration: none !important;
 }
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
-  color: #F6F6E8;
+.navbar{
+  height: 40px;
+  width: 100%;
+  background: #984b43;
+  padding: 10px;
+}
+
+.navbar > *{
+  display: inline-block;
+  float: left;
+  margin: 0 10px;
+}
+.navbar > ul{
+  height: 50px;
+}
+
+.navbar > ul >li{
+  display: block;
+  min-width: 10%;
+  margin-left: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  float:left;
+}
+
+.navbar-brand{
+  font-size: 2em;
+}
+
+input[type=text]{
+  background: inherit;
+  border: none;
+  outline: none !important;
+  border-bottom: 1px dashed #eac67c;
+}
+input[type=submit]{
+  background: #984b43;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+label{
+display: block;
+margin: 30px auto;
+min-height: 20px;
+}
+
+label span{
+  float:left;
+  width: 40%;
+  text-align: right;
+}
+
+label input{
+float: left;
+margin-left: 30px;
+}
+
+textarea{
+  background: rgba(256, 256, 256, 0.1);
+}
+
+.form__right-input{
+    text-align: left;
+}
+
+button{
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #eac67c;
+}
+
+/*  */
+
+
+
+#edit{
+  text-align: center;
+}
+
+.ability-edit{
+  border-top: 1px dashed #eac67c;
+  padding: 10% auto;
+  margin: 30px auto;
 }
